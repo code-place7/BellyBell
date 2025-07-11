@@ -1,3 +1,4 @@
+import SafeScreen from "@/components/SafeScreen";
 import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
 import { useEffect } from "react";
@@ -17,5 +18,9 @@ export default function RootLayout() {
     if (fontsLoaded) SplashScreen.hideAsync();
   }, [fontsLoaded, error]);
 
-  return <Stack screenOptions={{ headerShown: false }} />;
+  return (
+    <SafeScreen>
+      <Stack screenOptions={{ headerShown: false }} />
+    </SafeScreen>
+  );
 }
