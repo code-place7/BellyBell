@@ -24,8 +24,8 @@ const TabBarIcon = ({ focused, icon, title }: TabBarIconProps) => (
 );
 
 export default function TabLayout() {
-  const isAuthenticated = true;
-  if (isAuthenticated) return <Redirect href={"/(tabs)/index"} />;
+  const isAuthenticated = false;
+  if (isAuthenticated) return <Redirect href={"/(tabs)"} />;
   return (
     <Tabs
       screenOptions={{
