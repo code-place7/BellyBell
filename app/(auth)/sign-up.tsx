@@ -1,9 +1,9 @@
 import CustomButton from "@/components/CustomButton";
 import CustomInput from "@/components/Custominput";
-import { Link } from "expo-router";
+import { createUser } from "@/lib/appwrite";
+import { Link, router } from "expo-router";
 import { useState } from "react";
 import { Alert, Text, View } from "react-native";
-// import {createUser} from "@/lib/appwrite";
 
 const SignUp = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -20,15 +20,15 @@ const SignUp = () => {
 
     setIsSubmitting(true);
 
-    // try {
-    //     await createUser({ email,  password,  name });
+    try {
+      await createUser({ email, password, name });
 
-    //     router.replace('/');
-    // } catch(error: any) {
-    //     Alert.alert('Error', error.message);
-    // } finally {
-    //     setIsSubmitting(false);
-    // }
+      router.replace("/");
+    } catch (error: any) {
+      Alert.alert("Error", error.message);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
