@@ -3,6 +3,8 @@ import CustomInput from "@/components/Custominput";
 import { Link } from "expo-router";
 import { useState } from "react";
 import { Alert, Text, View } from "react-native";
+// import {signIn} from "@/lib/appwrite";
+// import * as Sentry from '@sentry/react-native'
 
 const SignIn = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
