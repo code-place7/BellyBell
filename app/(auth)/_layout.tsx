@@ -1,5 +1,5 @@
 import { images } from "@/constants";
-import { Stack } from "expo-router";
+import { Slot } from "expo-router";
 import {
   Dimensions,
   Image,
@@ -33,7 +33,7 @@ const Authlayout = () => {
             className="self-center size-48 absolute -bottom-16 z-10"
           />
         </View>
-        <Stack screenOptions={{ headerShown: false }} />;
+        <Slot />
       </ScrollView>
     </KeyboardAvoidingView>
   );
