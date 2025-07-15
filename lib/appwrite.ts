@@ -13,6 +13,7 @@ export const appwriteConfig = {
   projectId: process.env.EXPO_PUBLIC_APPWRITE_PROJECT_ID!,
   platform: "com.monurix.bellybell",
   databaseId: "68727b43002d9bb1b0f3",
+  bucketId: "68767d7b00150b7e681b",
   userCollectionId: "68727b9000082141447f",
   categoriesCollectionId: "687521c2000b35480c6e",
   menuCollectionId: "6875234b0005fc8fdda7",
